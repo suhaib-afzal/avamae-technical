@@ -1,0 +1,91 @@
+@use '../_global-panel-css/panel' as *;
+
+.ArticleInfoPanel-desktop {
+  @extend %Panel;
+  display: flex;
+  justify-content: center;
+
+  .InfoBoxContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  .ImageBox {
+    height: 370px;
+    width: 50%;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 5px;
+    img {
+      width: 90%;
+      object-fit: scale-down;
+    }
+  }
+
+  .InfoBox {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: 70%;
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.ArticleInfoPanel-mobile {
+  @extend %Panel-flex;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap-reverse;
+
+  .ImageBox {
+    height: 100%;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding: 20px;
+    position: sticky;
+    margin-bottom: 5px;
+    img {
+      object-fit: scale-down;
+      width: 85%;
+      align-self: center;
+    }
+  }
+
+  .InfoBox {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+    bottom: 0;
+    position: sticky;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    * {
+      margin: 5px;
+    }
+    .text {
+      font-weight: 100;
+      font-size: xx-small;
+    }
+  }
+}

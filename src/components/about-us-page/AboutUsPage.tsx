@@ -1,5 +1,4 @@
-import { RouteComponentProps } from "@reach/router"
 
-export const AboutUsPage : React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
+export const AboutUsPage : React.FC = () => {
   return <div>AboutUsPage</div>
 }

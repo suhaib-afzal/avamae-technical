@@ -3,28 +3,39 @@ import logoCompany from '../assets/logo.svg';
 import logoValid from '../assets/Icon_Valid.svg';
 import './App.css';
 import useIsMobile from '../hooks/useIsMobile';
-import { NavBar } from '../components/nav-bar/NavBar';
-import { HomePage } from '../components/page/home-page/HomePage';
-import { AboutUsPage } from '../components/page/about-us-page/AboutUsPage';
-import { ContactUsPage } from '../components/page/contact-us-page/ContactUsPage';
-import { Router } from "@reach/router"
+import { HomePage } from '../components/home-page/HomePage';
+import { AboutUsPage } from '../components/about-us-page/AboutUsPage';
+import { ContactUsPage } from '../components/contact-us-page/ContactUsPage';
 import { Footer } from '../components/footer/Footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HeaderBar } from '../components/header-bar/HeaderBar';
 
-const IsMobileContext = createContext(false);
+export const IsMobileContext = createContext(false);
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <><HeaderBar/><HomePage/><Footer/></>,
+  },
+  {
+    path: "/about-us",
+    element: <><HeaderBar/><AboutUsPage/><Footer/></>
+  },
+  {
+    path: "/contact-us",
+    element: <><HeaderBar/><ContactUsPage/><Footer/></>
+  }
+]);
 
 function App() {
   const isMobile = useIsMobile();
 
   return (
-    <IsMobileContext.Provider value={isMobile}>
-      {isMobile ? <></> : <NavBar/>}
-      <Router>
-        <HomePage path="/"/>
-        <AboutUsPage path="/about-us"/>
-        <ContactUsPage path="/contact-us"/>
-      </Router>
-      <Footer/>
-    </IsMobileContext.Provider>
+    <div className='App'>
+      <IsMobileContext.Provider value={isMobile}>
+        <RouterProvider router={router}/>
+      </IsMobileContext.Provider>
+    </div>
   );
 }
 

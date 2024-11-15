@@ -1,0 +1,21 @@
+.NavBar {
+  display: flex;
+  background-color: whitesmoke;
+  height: 30%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.NavBar div {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5%;
+  width: 30%;
+  padding-right: 10%;
+}
+.NavBar img {
+  height: 15%;
+  width: 12%;
+  padding: 0.5%;
+  padding-left: 10%;
+}/*# sourceMappingURL=NavBar.css.map */

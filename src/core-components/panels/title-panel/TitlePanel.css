@@ -1,0 +1,65 @@
+.TitlePanel-large-desktop, .TitlePanel-large-mobile {
+  height: 450px;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: xx-large;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+.TitlePanel-large-mobile, .TitlePanel-large-desktop {
+  color: white;
+}
+.TitlePanel-large-mobile img, .TitlePanel-large-desktop img {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.TitlePanel-large-mobile .Infobox, .TitlePanel-large-desktop .Infobox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+.TitlePanel-large-mobile .Infobox *, .TitlePanel-large-desktop .Infobox * {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.TitlePanel-large-mobile h2, .TitlePanel-large-desktop h2 {
+  padding: 0px;
+  margin: 0px;
+}
+.TitlePanel-large-mobile h3, .TitlePanel-large-desktop h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.TitlePanel-large-desktop .Infobox {
+  width: 40%;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.TitlePanel-large-desktop img {
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+
+.TitlePanel-large-mobile .Infobox {
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.TitlePanel-large-mobile img {
+  -o-object-position: 70% 0;
+     object-position: 70% 0;
+}/*# sourceMappingURL=TitlePanel.css.map */

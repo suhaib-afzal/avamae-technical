@@ -1,0 +1,55 @@
+@use '../_global-panel-css/panel' as *;
+
+%TitlePanel-base {
+  color: white;
+  img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    object-fit: cover;
+  }
+  .Infobox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    * {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  } 
+  h2 {
+    padding: 0px;
+    margin: 0px;
+  }
+  h3 {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+.TitlePanel-large-desktop {
+  @extend %Panel-large;
+  @extend %TitlePanel-base;
+  .Infobox {
+    width: 40%;
+    left: 10%;
+    @include CenterVertically();
+  } 
+  img {
+    object-position: 0 0;
+  }
+}
+
+.TitlePanel-large-mobile {
+  @extend %Panel-large;
+  @extend %TitlePanel-base;
+  .Infobox {
+    width: 80%;
+    @include Center();
+  } 
+  img {
+    object-position: 70% 0;
+  }
+}

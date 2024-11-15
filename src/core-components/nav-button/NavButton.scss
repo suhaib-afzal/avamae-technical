@@ -1,0 +1,35 @@
+%NavButton {
+  border: transparent;
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+%NavButton-standard {
+  @extend %NavButton;
+  color: #367fba;
+  font-weight: 600;
+  font-size: x-small;
+  border-radius: 6px;
+  height: 35px;
+  width: 75px
+}
+
+.NavButton-light-blue {
+  @extend %NavButton-standard;
+  background-color: #eef7ff;
+}
+
+.NavButton-dark-blue {
+  @extend %NavButton-standard;
+  background-color: #2f7bb8;
+  color: white;
+}
+
+.NavButton-link-style {
+  @extend %NavButton;
+  background-color: inherit;
+  text-transform: uppercase;
+  color: #727272;
+}
