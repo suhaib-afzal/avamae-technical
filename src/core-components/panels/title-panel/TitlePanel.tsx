@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import './TitlePanel.css' 
-import { PanelStyleType } from '../PanelStyleType'
+import { DesktopOrMobileStyleType } from '../../DesktopOrMobileStyleType'
 
 
 interface TitlePanelProps {
@@ -8,7 +8,7 @@ interface TitlePanelProps {
   title: string,
   subtitle?: string,
   button: ReactNode,
-  styleType: PanelStyleType
+  styleType: DesktopOrMobileStyleType
 }
 
 export const TitlePanel: React.FC<TitlePanelProps> = ({image, title, subtitle, button, styleType}) => {

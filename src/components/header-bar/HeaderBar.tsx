@@ -2,8 +2,8 @@ import { useContext } from "react"
 import { IsMobileContext } from "../../app/App"
 import { NavBar } from "../../core-components/nav-bar/NavBar"
 import { LogoBar } from "../../core-components/logo-bar/LogoBar"
-import { NavButton } from "../../core-components/nav-button/NavButton"
 import logo from "../../assets/logo.svg"
+import { NavButton } from "../nav-button/NavButton"
 
 
 export const HeaderBar: React.FC = () => {
@@ -15,7 +15,7 @@ export const HeaderBar: React.FC = () => {
     <NavButton label="About Us" path="/about-us" styleType="link-style"/>,
     <NavButton label="Log In" path="" styleType="light-blue"/>]}/>
     
-  const logoBar = <LogoBar image={logo}/>
+  const logoBar = <LogoBar path="/" image={logo}/>
 
   return <>{isMobile ? logoBar : navBar}</>
 }

@@ -1,19 +1,14 @@
 import { Link } from "react-router-dom"
-import "./NavButton.css"
+import { Button, ButtonStyle } from "../../core-components/button/Button"
 
 interface NavButtonProps {
   label: string,
   path: string,
-  styleType: NavButtonStyles
+  styleType: ButtonStyle
 }
 
-export type NavButtonStyles = "light-blue" | "dark-blue" | "link-style"
-
-
 export const NavButton : React.FC<NavButtonProps> = ({label, path, styleType}) => {
-  return <>
-    <button className={`NavButton-${styleType}`}>
+  return <Button styleType={styleType}>
       <Link to={path}>{label}</Link>
-    </button>
-  </>
+    </Button>
 }

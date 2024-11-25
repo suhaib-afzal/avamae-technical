@@ -1,0 +1,42 @@
+.Button-link-style, .Button-dark-blue-wide, .Button-light-blue-wide, .Button-dark-blue, .Button-light-blue {
+  border: transparent;
+}
+.Button-link-style a, .Button-dark-blue-wide a, .Button-light-blue-wide a, .Button-dark-blue a, .Button-light-blue a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.Button-dark-blue-wide, .Button-light-blue-wide, .Button-dark-blue, .Button-light-blue {
+  color: #367fba;
+  font-weight: 600;
+  font-size: x-small;
+  border-radius: 6px;
+  height: 35px;
+  width: 75px;
+}
+
+.Button-light-blue {
+  background-color: #eef7ff;
+}
+
+.Button-dark-blue {
+  background-color: #2f7bb8;
+  color: white;
+}
+
+.Button-light-blue-wide {
+  background-color: #eef7ff;
+  width: 100%;
+}
+
+.Button-dark-blue-wide {
+  background-color: #2f7bb8;
+  color: white;
+  width: 100%;
+}
+
+.Button-link-style {
+  background-color: inherit;
+  text-transform: uppercase;
+  color: #727272;
+}/*# sourceMappingURL=Button.css.map */

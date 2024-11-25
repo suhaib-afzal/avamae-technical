@@ -1,13 +1,13 @@
 import { ReactNode } from "react"
 import "./TextPanel.css"
-import { PanelStyleType } from "../PanelStyleType"
+import { DesktopOrMobileStyleType } from "../../DesktopOrMobileStyleType"
 
 interface TextPanelProps {
   title: string,
   subtitle: string,
   text: string,
   button: ReactNode,
-  styleType: PanelStyleType
+  styleType: DesktopOrMobileStyleType
 }
 
 export const TextPanel: React.FC<TextPanelProps> = ({title, subtitle, text, button, styleType}) => {

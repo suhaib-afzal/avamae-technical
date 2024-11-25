@@ -90,12 +90,9 @@ h3 {
   padding-right: 10px;
   margin: 20px;
 }
-.ArticleInfoPanel-mobile .InfoBox h3 {
-  padding: 0;
+.ArticleInfoPanel-mobile .InfoBox h3, .ArticleInfoPanel-mobile .InfoBox div {
+  padding: 10px;
   margin: 0;
-}
-.ArticleInfoPanel-mobile .InfoBox * {
-  margin: 5px;
 }
 .ArticleInfoPanel-mobile .InfoBox .text {
   font-weight: 100;

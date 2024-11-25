@@ -5,10 +5,9 @@ import { TitlePanel } from "../../core-components/panels/title-panel/TitlePanel"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { NavBar } from "../../core-components/nav-bar/NavBar";
-import { NavButton } from "../../core-components/nav-button/NavButton";
 import { IsMobileContext } from "../../app/App";
 import { useContext } from "react";
+import { NavButton } from "../nav-button/NavButton";
 
 
 export const Carousel : React.FC = () => {
@@ -41,7 +40,8 @@ export const Carousel : React.FC = () => {
       <TitlePanel image={deet.ImageUrl} 
                   title={deet.Title} 
                   subtitle={deet.Subtitle} 
-                  button={<NavButton label="Contact Us" path="/contact-us" styleType="dark-blue"/>}
+                  button={<NavButton label="Contact Us" path="/contact-us" 
+                           styleType={isMobile? "dark-blue-wide": "dark-blue"}/>}
                   styleType={isMobile? "mobile" : "desktop"}/>
     </SwiperSlide>)
 

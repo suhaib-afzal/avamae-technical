@@ -18,6 +18,11 @@
   width: 100%
 }
 
+%Panel-xlarge-flex {
+  min-height: 700px;
+  width: 100%
+}
+
 @mixin CenterVertically() {
   top: 50%;
   transform: translateY(-50%);

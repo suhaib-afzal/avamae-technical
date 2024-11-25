@@ -1,13 +1,13 @@
 import { ReactNode } from "react"
 import "./GraphicInfoPanel.css"
-import { PanelStyleType } from "../PanelStyleType"
+import { DesktopOrMobileStyleType } from "../../DesktopOrMobileStyleType"
 
 interface GraphicInfoPanelProps {
   image: string,
   title: string,
   text: string,
   button: ReactNode,
-  styleType: PanelStyleType
+  styleType: DesktopOrMobileStyleType
 }
 
 export const GraphicInfoPanel: React.FC<GraphicInfoPanelProps> = ({image, title, text, button, styleType}) => {

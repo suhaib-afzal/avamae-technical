@@ -4,15 +4,17 @@
   display: flex;
   flex-direction: column;
   justify-items:center;
+  margin-bottom: 50px;
 
   .Container {
     height: 20%;
     width: 70%;
+    display: flex;
     flex-direction: column;
     justify-items: center;
     align-self: center;
     justify-items: center;
-    padding: 30px;
+    padding: 20px;
   };
 
   .Title {
@@ -25,6 +27,7 @@
 
   .TextBox {
     margin-bottom: 10px;
+    white-space: pre-line;
   }
 }
 
@@ -38,7 +41,7 @@
 }
 
 .TextPanel-mobile {
-  @extend %Panel-xlarge;
+  @extend %Panel-xlarge-flex;
   @extend %TextPanel-base;
 
   .TextBox {
