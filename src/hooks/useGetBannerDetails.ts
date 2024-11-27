@@ -1,21 +1,43 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 
 
-export const useGetBannerDetails = () => {
+export const useGetBannerDetails = (): BannerDetails | UnexpectedErrorResponse | undefined => {
   
-  const [bannerDetails, setBannerDetails] = useState<BannerDetails>();
+  const [bannerDetailsOrError, setBannerDetailsOrError] = useState<BannerDetails | UnexpectedErrorResponse>();
 
   useEffect(() => {
     axios.get<BannerDetails>(
-      'https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details'
+      'https://interview-assessment.api.avamae.co.uk/api/v1/home/banner-details',
+      {validateStatus: () => true}
     )
-    .then(response => setBannerDetails(response.data))
-    .catch(err => console.log(err))
+    .then(response => {
+      if (response.status === 200)
+      {
+        setBannerDetailsOrError(response.data)
+      }
+      else 
+      {
+        setBannerDetailsOrError({Status: response.status, StatusText: response.statusText}) 
+      }
+    })
 
   }, [])
     
-  return bannerDetails; 
+  return bannerDetailsOrError; 
+}
+
+export const useGetBannerDetailsFAILS = (): BannerDetails | UnexpectedErrorResponse | undefined  => {
+  return {Status: 600, StatusText: "Nope"}
+}
+
+export function isUnexpectedErrorResponse(res: BannerDetails | UnexpectedErrorResponse): res is UnexpectedErrorResponse {
+  return (typeof res.Status === "number")
+}
+
+export interface UnexpectedErrorResponse {
+  Status: number,
+  StatusText: string
 }
 
 export interface BannerDetails {

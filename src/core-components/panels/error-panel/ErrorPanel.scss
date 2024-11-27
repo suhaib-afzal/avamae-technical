@@ -1,0 +1,18 @@
+@use '../_panel-shared-styling/Panel-Shared';
+
+.ErrorPanel-large {
+  @extend %Panel-large;
+  background-color: rgb(255, 85, 85);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .ErrorTitle {
+    font-size: xx-large;
+  }
+  .ErrorMessage {
+    font-size: large;
+  }
+}

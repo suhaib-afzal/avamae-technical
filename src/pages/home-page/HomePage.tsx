@@ -29,7 +29,7 @@ export const HomePage : React.FC = () => {
       }/>
       <TextPanel title={loremIpsum({count: 3, units: "words"})} 
                  subtitle={loremIpsum({count: 1, units: "sentences"})} 
-                 text={loremIpsum({count: 4, units: "paragraphs"})} 
+                 text={loremIpsum({count: 7, units: "paragraphs"})} 
                  styleType={desktopOrMobile}
                  button={
         <NavButton label="Contact us" path="/contact-us" styleType={`dark-blue${whenMobileWideSuffix}`}/>

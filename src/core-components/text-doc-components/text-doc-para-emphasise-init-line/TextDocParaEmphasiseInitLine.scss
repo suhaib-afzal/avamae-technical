@@ -1,0 +1,11 @@
+
+@use "../_text-doc-shared-styling/TextDoc-Shared.scss" as *;
+
+.TextDocParaEmphasiseInitLine {
+  margin: $text-box-margin;
+  font-size: small;
+  line-height: 1.5;
+  .EmphasisLine {
+    font-weight: 600;
+  }
+}

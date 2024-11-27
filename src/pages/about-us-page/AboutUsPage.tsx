@@ -7,6 +7,9 @@ import { TextDocImage } from "../../core-components/text-doc-components/text-doc
 import { useContext } from "react"
 import { IsMobileContext } from "../../app/App"
 import { TextDocTitle } from "../../core-components/text-doc-components/text-doc-title/TextDocTitle"
+import { TextDocSubtitle } from "../../core-components/text-doc-components/text-doc-subtitle/TextDocSubtitle"
+import { TextDocParaEmphasiseInitLine } from "../../core-components/text-doc-components/text-doc-para-emphasise-init-line/TextDocParaEmphasiseInitLine"
+import { couldStartTrivia } from "typescript"
 
 export const AboutUsPage : React.FC = () => {
   const isMobile = useContext(IsMobileContext);
@@ -15,9 +18,9 @@ export const AboutUsPage : React.FC = () => {
   return <AboutDocumentContainer desktopOrMobile={desktopOrMobile}>
     <TextDoc>
       <TextDocTitle title="About Us"/>
-      <TextDocParagraph>
+      <TextDocParaEmphasiseInitLine emphasisLine={loremIpsum({count: 2, units: "sentence"})}>
         {loremIpsum({count: 3, units: "paragraphs"})}
-      </TextDocParagraph>
+      </TextDocParaEmphasiseInitLine>
       <TextDocParagraph>
         {loremIpsum({count: 3, units: "paragraphs"})}
       </TextDocParagraph>
@@ -25,6 +28,7 @@ export const AboutUsPage : React.FC = () => {
       <TextDocParagraph>
         {loremIpsum({count: 3, units: "paragraphs"})}
       </TextDocParagraph>
+      <TextDocSubtitle subtitle={loremIpsum({count:6, units: "words"})}/>
       <TextDocParagraph>
         {loremIpsum({count: 3, units: "paragraphs"})}
       </TextDocParagraph>

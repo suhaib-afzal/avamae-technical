@@ -1,0 +1,12 @@
+@use '../_panel-shared-styling/Panel-Shared';
+
+.LoadingPanel-large {
+  @extend %Panel-large;
+  background-color: lightgray;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: xx-large;
+}

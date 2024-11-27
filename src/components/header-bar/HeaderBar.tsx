@@ -11,8 +11,8 @@ export const HeaderBar: React.FC = () => {
 
   const navBar = <NavBar image={logo} buttons={[
     <NavButton label="Home" path="/" styleType="link-style"/>,
-    <NavButton label="Contact Us" path="/contact-us" styleType="link-style"/>,
     <NavButton label="About Us" path="/about-us" styleType="link-style"/>,
+    <NavButton label="Contact Us" path="/contact-us" styleType="link-style"/>,
     <NavButton label="Log In" path="" styleType="light-blue"/>]}/>
     
   const logoBar = <LogoBar path="/" image={logo}/>
