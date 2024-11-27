@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import "./TextPanel.css"
+import "./TextPanel.scss"
 import { DesktopOrMobileStyleType } from "../../DesktopOrMobileStyleType"
 
 interface TextPanelProps {

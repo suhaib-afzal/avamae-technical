@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import { DesktopOrMobileStyleType } from "../DesktopOrMobileStyleType"
-import "./FooterBar.css"
+import "./FooterBar.scss"
 
 type FooterBarProps = {
   signature: ReactNode,

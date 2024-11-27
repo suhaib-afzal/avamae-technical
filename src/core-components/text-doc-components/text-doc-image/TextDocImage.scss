@@ -1,0 +1,24 @@
+%TextDocImageConatiner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.TextDocImageContainer-Standard {
+  @extend %TextDocImageConatiner;
+  height: 500px;
+  .TextDocImage{
+    height: 80%;
+  }
+}
+
+.TextDocImageContainer-Wide {
+  @extend %TextDocImageConatiner;
+  aspect-ratio: 2/1;
+  width: 100%;
+  .TextDocImage{
+    width: 90%;
+  }
+}

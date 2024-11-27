@@ -1,0 +1,37 @@
+%FormSuccessFailure {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+  .IconContainer {
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 7px;
+    .IconImage {
+      height: 90%;
+    }
+  }
+  * {
+    margin: 2px;
+    padding: 2px;
+  }
+  h2 {
+    font-size: medium;
+    font-weight: 600;
+  }
+}
+
+.FormSuccessFailure-Success {
+  @extend %FormSuccessFailure;
+  background-color: #E9F4DA;
+}
+
+.FormSuccessFailure-Failure {
+  @extend %FormSuccessFailure;
+  background-color: #F4E3DA;
+}

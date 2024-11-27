@@ -1,0 +1,20 @@
+%ContactFormContainer {
+  height: 750px;
+  display: flex;
+  padding-top: 2%;
+  flex-direction: column;
+  font-size: x-small;
+}
+
+.ContactFormContainer-desktop {
+  @extend %ContactFormContainer;
+  padding-left: 9%;
+  width: 40%;
+}
+
+.ContactFormContainer-mobile {
+  @extend %ContactFormContainer;
+  padding-left: 2%;
+  width: 95%;
+  height: 100%;
+}

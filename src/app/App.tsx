@@ -1,16 +1,12 @@
-import React, { createContext, useEffect, useState } from 'react';
-import logoCompany from '../assets/logo.svg';
-import logoValid from '../assets/Icon_Valid.svg';
-import './App.css';
+import { createContext } from 'react';
+import './global-app-styling.scss';
 import useIsMobile from '../hooks/useIsMobile';
-import { HomePage } from '../components/home-page/HomePage';
-import { AboutUsPage } from '../components/about-us-page/AboutUsPage';
-import { ContactUsPage } from '../components/contact-us-page/ContactUsPage';
+import { HomePage } from '../pages/home-page/HomePage';
+import { AboutUsPage } from '../pages/about-us-page/AboutUsPage';
+import { ContactUsPage } from '../pages/contact-us-page/ContactUsPage';
 import { Footer } from '../components/footer/Footer';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HeaderBar } from '../components/header-bar/HeaderBar';
-
-export const IsMobileContext = createContext(false);
 
 const router = createBrowserRouter([
   {
@@ -26,6 +22,8 @@ const router = createBrowserRouter([
     element: <><HeaderBar/><ContactUsPage/><Footer/></>
   }
 ]);
+
+export const IsMobileContext = createContext(false);
 
 function App() {
   const isMobile = useIsMobile();

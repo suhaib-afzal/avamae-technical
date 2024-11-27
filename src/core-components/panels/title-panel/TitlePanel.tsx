@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import './TitlePanel.css' 
+import './TitlePanel.scss' 
 import { DesktopOrMobileStyleType } from '../../DesktopOrMobileStyleType'
 
 

@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import "./GraphicInfoPanel.css"
+import "./GraphicInfoPanel.scss"
 import { DesktopOrMobileStyleType } from "../../DesktopOrMobileStyleType"
 
 interface GraphicInfoPanelProps {

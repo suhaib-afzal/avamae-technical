@@ -1,0 +1,16 @@
+%FormRow {
+  display: flex;
+  justify-self: center;
+  padding: 10px;
+}
+
+.FormRow-standard {
+  @extend %FormRow;
+  justify-content: space-evenly;
+}
+
+.FormRow-left {
+  @extend %FormRow;
+  justify-content: left;
+  align-items: center;
+}

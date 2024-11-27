@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import "./NavBar.css"
+import "./NavBar.scss"
 
 type NavBarProps = {
   image: string

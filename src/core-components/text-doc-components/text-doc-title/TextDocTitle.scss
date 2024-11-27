@@ -1,0 +1,9 @@
+@use "../_text-doc-shared-styling/TextDoc-Shared.scss" as *;
+
+
+.TextDocTitle {
+  font-weight: 300;
+  font-size: x-large;
+  margin: $text-box-margin;
+  margin-bottom: 40px;
+}

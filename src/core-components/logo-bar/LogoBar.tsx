@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "./LogoBar.css"
+import "./LogoBar.scss"
 
 type LogoBarProps = {
   path: string,

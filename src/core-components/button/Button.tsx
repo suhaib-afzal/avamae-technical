@@ -1,4 +1,4 @@
-import "./Button.css"
+import "./Button.scss"
 import { ReactNode } from "react"
 
 interface ButtonProps {

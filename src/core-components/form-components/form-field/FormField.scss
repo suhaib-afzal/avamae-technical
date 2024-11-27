@@ -1,0 +1,25 @@
+
+.FormField {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  text-align: left;
+  width: 100%;
+  min-width: 0%;
+  margin: 5px;
+
+  .FieldErrorMsg {
+    color: red;
+    font-weight: 50;
+    font-style: italic;
+  }
+  
+  input, textarea {
+    background-color: #f6f6f9;
+    border-color: #eaeaeb;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 10px;
+  }
+}

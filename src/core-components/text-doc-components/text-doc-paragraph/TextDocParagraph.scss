@@ -1,0 +1,7 @@
+@use "../_text-doc-shared-styling/TextDoc-Shared.scss" as *;
+
+.TextDocParagraph {
+  margin: $text-box-margin;
+  font-size: small;
+  line-height: 1.5;
+}
