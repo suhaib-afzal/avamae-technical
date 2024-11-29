@@ -13,3 +13,4 @@ Bugs
 ContactUsPage on Mobile,  Massive whitespace below form
 ContactUsPage on iPad air,  Massive whitespace below form, form is too thin, background image is too wide
 HomePage Align margins,  Each Component seems to have different left and right margin for the text
+ContactUsPage,  Add loading indication as form POSTs 
