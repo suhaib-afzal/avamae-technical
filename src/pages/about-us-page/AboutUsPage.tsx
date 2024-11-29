@@ -9,7 +9,6 @@ import { IsMobileContext } from "../../app/App"
 import { TextDocTitle } from "../../core-components/text-doc-components/text-doc-title/TextDocTitle"
 import { TextDocSubtitle } from "../../core-components/text-doc-components/text-doc-subtitle/TextDocSubtitle"
 import { TextDocParaEmphasiseInitLine } from "../../core-components/text-doc-components/text-doc-para-emphasise-init-line/TextDocParaEmphasiseInitLine"
-import { couldStartTrivia } from "typescript"
 
 export const AboutUsPage : React.FC = () => {
   const isMobile = useContext(IsMobileContext);

@@ -10,6 +10,5 @@ export const ContactFailureView: React.FC = () => {
   return <FormSuccessFailure icon={iconFail}
                              message="An unexpected Error has occured"
                              submessage="Please try again or give us a call" 
-                             successOrFailure="Failure"
-                             desktopOrMobile="desktop"/>
+                             successOrFailure="Failure"/>
 }

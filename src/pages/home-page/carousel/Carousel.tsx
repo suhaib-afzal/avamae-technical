@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
-import { BannerDetails, isUnexpectedErrorResponse, useGetBannerDetails, useGetBannerDetailsFAILS } from "../../../hooks/useGetBannerDetails"
+import { isUnexpectedErrorResponse, useGetBannerDetails } from "./hooks/useGetBannerDetails"
 import { TitlePanel } from "../../../core-components/panels/title-panel/TitlePanel"
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,7 +13,7 @@ import { ErrorPanel } from "../../../core-components/panels/error-panel/ErrorPan
 
 
 export const Carousel : React.FC = () => {
-  const bannerDetails = useGetBannerDetailsFAILS()
+  const bannerDetails = useGetBannerDetails()
   const isMobile = useContext(IsMobileContext);
 
   //TODO: Add timeout so that enough time loading will

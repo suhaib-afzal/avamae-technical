@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 
 
 export const useGetBannerDetails = (): BannerDetails | UnexpectedErrorResponse | undefined => {
@@ -25,10 +25,6 @@ export const useGetBannerDetails = (): BannerDetails | UnexpectedErrorResponse |
   }, [])
     
   return bannerDetailsOrError; 
-}
-
-export const useGetBannerDetailsFAILS = (): BannerDetails | UnexpectedErrorResponse | undefined  => {
-  return {Status: 600, StatusText: "Nope"}
 }
 
 export function isUnexpectedErrorResponse(res: BannerDetails | UnexpectedErrorResponse): res is UnexpectedErrorResponse {
@@ -57,3 +53,11 @@ export interface Error {
   MessageCode: string
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+// TESTING ONLY DO NOT USE IN PRODUCTION
+
+export const TESTING_useGetBannerDetails_FAILS = (): BannerDetails | UnexpectedErrorResponse | undefined  => {
+  return {Status: 600, StatusText: "Nope"}
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////

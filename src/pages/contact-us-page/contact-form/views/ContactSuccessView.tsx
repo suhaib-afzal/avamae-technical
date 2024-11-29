@@ -10,7 +10,6 @@ export const ContactSuccessView: React.FC = () => {
               icon={<IconCircleBackground iconSrc={iconValid} greenOrRed="Green"/>}
               message="Your message has been sent"
               submessage="We will be in contact with you within 24 hours" 
-              successOrFailure="Success"
-              desktopOrMobile="desktop"/>
+              successOrFailure="Success"/>
 
 }

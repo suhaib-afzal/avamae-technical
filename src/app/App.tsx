@@ -1,6 +1,6 @@
 import { createContext } from 'react';
-import './global-app-styling.scss';
-import useIsMobile from '../hooks/useIsMobile';
+import './App.scss';
+import useIsMobile from './hooks/useIsMobile';
 import { HomePage } from '../pages/home-page/HomePage';
 import { AboutUsPage } from '../pages/about-us-page/AboutUsPage';
 import { ContactUsPage } from '../pages/contact-us-page/ContactUsPage';

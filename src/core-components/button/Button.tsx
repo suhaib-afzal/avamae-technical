@@ -1,7 +1,7 @@
-import "./Button.scss"
-import { ReactNode } from "react"
+import "./Button.scss";
+import { ReactNode } from "react";
 
-interface ButtonProps {
+type ButtonProps = {
   children?: ReactNode,
   styleType: ButtonStyle,
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
